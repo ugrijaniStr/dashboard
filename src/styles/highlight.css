@@ -1,0 +1,52 @@
+pre {
+    color: var(--fontColor);
+    font-size: 0.95rem;
+  }
+  
+  pre b:nth-child(1),  
+      b:nth-child(11),
+      b:nth-child(9),
+      b:nth-child(13),
+      b:nth-child(26),
+      b:nth-child(25),
+      b:nth-child(17),
+      b:nth-child(23),
+      b:nth-child(29) {
+    color: rgb(192, 1, 192);
+    font-weight: 600;
+  }
+  
+  pre b:nth-child(2),
+      b:nth-child(6),
+      b:nth-child(8),
+      b:nth-child(14),
+      b:nth-child(16),
+      b:nth-child(21),
+      b:nth-child(30),
+      b:nth-child(34) {
+    color: rgb(57, 57, 255);
+  }
+  
+  pre b:nth-child(3),
+      b:nth-child(5),
+      b:nth-child(7),
+      b:nth-child(12),
+      b:nth-child(15),
+      b:nth-child(18),
+      b:nth-child(20),
+      b:nth-child(22),
+      b:nth-child(28),
+      b:nth-child(31),
+      b:nth-child(33),
+      b:nth-child(35) {
+        color: rgb(187, 159, 1);
+  }
+  
+  pre b:nth-child(4),
+      b:nth-child(10),
+      b:nth-child(19),
+      b:nth-child(24),
+      b:nth-child(27),
+      b:nth-child(32) {
+    color: rgb(5, 255, 5);
+  }
