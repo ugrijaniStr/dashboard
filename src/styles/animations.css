@@ -1,0 +1,27 @@
+@keyframes glowingAnimation {
+    0% {
+      box-shadow: 0 0 300px 200px var(--glowColor),
+      -1800px 500px 300px 200px var(--glowColor);
+    } 50% {
+      box-shadow: 0 0 150px 100px var(--glowColor),
+      -1800px 500px 150px 100px var(--glowColor);
+    } 100% {
+      box-shadow: 0 0 300px 200px var(--glowColor),
+      -1800px 500px 300px 200px var(--glowColor);
+    }
+}
+
+@keyframes textAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
+@keyframes graphAnimation {
+  0% {top: -10%;}
+  50% {top: 0%}
+  100% {top: -10%};
+}
