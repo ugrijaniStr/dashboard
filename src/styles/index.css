@@ -1,0 +1,863 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+:root {
+  --bgColor: rgba(18,17,33,255);
+  --boxColor: rgba(0, 0, 0, 0.11);
+  --glowColor: rgba(45,57,162,255);
+  --fontColor: rgb(228, 228, 228);
+  --textColor: rgb(179, 179, 179);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--glowColor);
+}
+
+body {
+  background: var(--bgColor);
+  background: radial-gradient(closest-side ,var(--glowColor) -98%, var(--bgColor) 100%);
+}
+
+body::before {
+  position: absolute;
+  clip-path: polygon(40% 63%, 71% 72%, 100% 64%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 80%);
+  background: rgba(0, 0, 0, 0.123);
+  z-index: -1;
+  content: "";
+  height: 100%;
+  width: 100%;
+}
+
+.mainArea {
+  width: 100%;
+  height: 100%;
+}
+
+.mainSection {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.navbar {
+  width: 100%;
+  height: 8%;
+}
+
+.navbarBox {
+  width: 100%;
+  height: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: white;
+  gap: 5%;
+  list-style-type: none;
+  font-family: "Asap", sans-serif;
+}
+
+.navbarItem:nth-child(1) {
+  margin: 0 20% 0 5%;
+}
+
+.navbarItem:last-child {
+  margin: 0 5% 0 20%;
+  background: rgba(0, 0, 0, 0.459);
+  display: grid;
+  place-items: center;
+  border-radius: 100px;
+  border: 1px solid var(--glowColor);
+  box-shadow: 0 0 20px 2px var(--glowColor);
+  width: 20%;
+  height: 50%;
+}
+
+.navbarItem:last-child:hover {
+  background: var(--glowColor);
+  transition: all 0.3s ease-in;
+}
+
+.mainBox {
+  width: 100%;
+  height: 92%;
+  display: flex;
+  flex-direction: row;
+}
+
+.childBox {
+  width: 50%;
+  height: 100%;
+}
+
+.childBox:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 0 10%;
+}
+
+.childBox:last-child {
+  display: grid;
+  place-items: center;
+}
+
+.codeBox {
+  width: 70%;
+  height: 40%;
+  background: rgba(18,17,33,255);
+  border-radius: 8px;
+  box-shadow: 0 0 400px -2px var(--glowColor);
+  transform: skewY(7deg);
+  padding: 3%;
+}
+
+.childBox h1 {
+  color: var(--fontColor);
+  margin-bottom: 5%;
+  font-size: 2.4rem;
+  font-family: arial;
+  border-top: none;
+  border-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #3acfd5 50%, #3a4ed5, rgba(0, 0, 0, 0) 100%) 1;
+  border-width: 3px;
+  border-style: solid;
+  text-align: center;
+  padding: 5px;
+}
+
+.childBox:has(h1) b {
+  background: linear-gradient(to right,#7953cd 20%,#00affa 30%,#0190cd 70%,#764ada 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textAnimation 5s ease-in-out infinite alternate;
+}
+
+.childBox p {
+  color: var(--textColor);
+  margin-bottom: 7%;
+  font-size: 1.2rem;
+  font-family: arial;
+}
+
+.btnsBox {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  gap: 3%;
+}
+
+.btnsBox button {
+  width: 20%;
+  height: 10%;
+  font-weight: bold;
+  color: var(--fontColor);
+}
+
+.btnsBox button:nth-child(1) {
+  border-radius: 7px;
+  background: linear-gradient(to bottom right, var(--glowColor), rgba(78,34,247,255));
+  outline: none;
+  border: none;
+  box-shadow: 0 0 20px 2px var(--glowColor);
+}
+
+.btnsBox button:nth-child(1):hover {
+  background: rgba(19,113,154,255);
+  box-shadow: 0 0 30px 2px rgba(19,113,154,255);
+  transition: 0.5s ease;
+}
+
+.btnsBox button:nth-child(2) {
+  border: 2px solid var(--glowColor);
+  border-radius: 7px;
+  background: none;
+}
+
+.btnsBox button:nth-child(2):hover {
+  background: var(--glowColor);
+  transition: all 0.5s ease-in;
+  box-shadow: 0 0 30px 2px var(--glowColor);
+}
+
+.infoSection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: column;
+  background: var(--bgColor);
+}
+
+.analyticsChild:first-child {
+  width: 50%;
+  display: block;
+}
+
+.graphStats {
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graphBox {
+  width: 70%;
+  height: 90%;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 80px -2px var(--glowColor);
+  background: var(--boxColor);
+  padding: 3%;
+  transform: skew(15deg, -7deg);
+  position: relative;
+  animation: graphAnimation 3s infinite alternate;
+}
+
+.graphBox h1 {
+  color: var(--fontColor);
+  font-size: 1.7rem;
+  margin-bottom: 3%;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+
+.nftBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.analyticsChild:first-child {
+  width: 60%;
+  height: 50%;
+}
+
+.analyticsChild:last-child {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+}
+
+.challengersBox {
+  width: 100%;
+  height: 60%;
+  display: grid;
+  place-items: center;
+  padding: 3%;
+}
+
+.challengersBox ul {
+  width: 90%;
+  height: 100%;
+  list-style-type: none;
+}
+
+.challengersItems {
+  width: 100%;
+  height: 10%;
+  margin-bottom: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 3;
+  background: rgba(14,13,25,255);
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.challengersItems:hover {
+  transition: all 0.5s ease;
+  position: relative;
+  left: 3%;
+  background:rgba(0, 0, 0, 0.445);
+}
+
+.challengersList {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fontColor);
+  font-family: arial;
+}
+
+.challengersList:nth-child(1), .challengersList:nth-child(2) {
+  width: 6%;
+  font-weight: bold;
+}
+.challengersList:nth-child(3) {
+  justify-content: left;
+  color: gray;
+  padding: 0 0 0 2%;
+  width: 28%;
+}
+
+.challengersList:nth-child(4) {
+  padding: 0 0 0 5%;
+  justify-content: left;
+  width: 40%;
+  color: gray;
+}
+
+.challengersList:nth-child(5) {
+  width: 20%;
+  padding: 0 2% 0.5% 0;
+  align-items:last baseline;
+  justify-content: right;
+  align-items: right;
+  font-style: italic;
+  font-size: .9rem;
+  color: gray;
+}
+
+.statsBox {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.doughnutBox {
+  width: 50%;
+  height: 100%;
+}
+
+.doughnutInfo {
+  width: 50%;
+  height: 100%;
+  list-style-type: none;
+  display: grid;
+  place-items: center;
+  padding: 3% 0 3% 0;
+}
+
+.doughnutList {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 3;
+  background: rgb(8, 11, 19);
+}
+
+.doughnutListItems:nth-child(1) {
+  width: 20%;
+  height: 100%;
+  font-size: 2.2rem;
+  color: var(--fontColor);
+  display: grid;
+  place-items: center;
+}
+
+.doughnutListItems:nth-child(2) {
+  width: 60%;
+  height: 100%;
+  display: block;
+}
+
+.doughnutTitleBox {
+  width: 100%;
+  height: 50%;
+}
+
+.doughnutLineBox {
+  width: 100%;
+  height: 50%;
+  display: grid;
+  padding: 0 0 0 5%;
+}
+
+.doughnutLineBox div {
+  height: 40%;
+  border-radius: 100px;
+}
+
+.doughnutTitleBox {
+  display: flex;
+  align-items: center;
+}
+
+.infoSection::after {
+  position: absolute;
+  background: var(--glowColor);
+  animation: glowingAnimation 10s infinite alternate;
+  z-index: 2;
+  content: "";
+  margin: 20% 0 0 99%;
+  height: 0.1%;
+  width: 0.1%;
+}
+
+.infoSection::before {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.123);
+  z-index: 1;
+  content: "";
+  height: 100%;
+  width: 100%;
+}
+
+.challengesSection {
+  width: 100%;
+  height: 100%;
+  background: var(--bgColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.challengesTitle {
+  width: 100%;
+  height: 30%;
+  padding: 8% 0 0 0;
+  font-family: arial;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--fontColor);
+  margin-bottom: 7%;
+}
+
+.challengesTitle h1 {
+  background: linear-gradient(to right,#7953cd 20%,#00affa 30%,#0190cd 70%,#764ada 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textAnimation 5s ease-in-out infinite alternate;
+}
+
+.challengesBoxes {
+  width: 85%;
+  height: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-y: scroll;
+  gap: 2%;
+}
+
+.challengesBoxItems {
+  border: 1.5px solid rgb(17, 5, 15);
+  background: var(--boxColor);
+  border-radius: 10px;
+}
+
+.challengesBoxItems:nth-child(5) > .challengesChild:first-child {
+  display: grid;
+  place-items: center;
+  padding: 5% 0 0 0;
+}
+
+.AnalyticBox {
+  width: 85%;
+  height: 80%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 1px solid var(--glowColor);
+  box-shadow: 0 0 20px 2px var(--glowColor);
+  background: linear-gradient(to bottom var(--bgColor), rgba(255, 0, 0, 0));
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.AnalyticBox::before {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  border-radius: 10px;
+  background: linear-gradient(to left, rgba(54, 54, 255, 0.185), rgba(0, 0, 255, 0));
+  clip-path: polygon(25% 0%, 100% 0%, 100% 45%, 54% 33%, 38% 16%);
+  width: 100%;
+  height: 100%;
+}
+
+.AnalyticBoxList {
+  width: 80%;
+  height: 40%;
+  background: rgba(0, 0, 0, 0.61);
+  border-radius: 8px;
+  box-shadow: 0 0 10px 2px black;
+  display: flex;
+  flex-direction: row;
+}
+
+.AnalyticBoxItems:first-child {
+  width: 20%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.AnalyticBoxItems:nth-child(2) {
+  width: 70%;
+  height: 100%;
+  font-family: arial;
+  display: grid;
+  place-content: center;
+}
+
+.AnalyticBoxItems:nth-child(2) h1 {
+  color: red;
+  text-shadow: 10px 2px 30px red;
+  font-size: 1rem;
+}
+
+.AnalyticBoxItems:nth-child(2) p {
+  color: gray;
+  font-size: .9rem;
+}
+
+.AnalyticBoxItems img {
+  width: 80%;
+  height: 80%;
+}
+
+.tableBox {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tableBoxItem {
+  background: var(--bgColor);
+  width: 25%;
+  height: 20%;
+  color: gray;
+  border: 0.5px solid rgb(43, 23, 43);
+  display: grid;
+  place-items: center;
+  font-family: arial;
+  font-size: .9rem;
+}
+
+.tableBoxItem:hover {
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 20px 2px var(--glowColor);
+  border: 0.5px solid var(--glowColor);
+  color: var(--fontColor);
+}
+
+.tableBoxItem:first-child {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.tableBoxItem:first-child > ul{
+  display: flex;
+  flex-wrap: nowrap;
+  list-style-type: none;
+  align-items: center;
+  gap: 2%;
+  width: 100%;
+  height: 100%;
+}
+
+.tableBoxItem:first-child > ul > li {
+  width: 10%;
+  height: 60%;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  border: 0.5px solid rgb(43, 23, 43);
+}
+
+.tableBoxItem:first-child > ul > li:first-child {
+  width: 30%;
+  height: 100%;
+  color: gray;
+  font-weight: bold;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+
+.tableBoxItem:nth-child(8) {
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 20px 2px var(--glowColor);
+  border: 0.5px solid var(--glowColor);
+  color: var(--fontColor);
+}
+
+.challengesBoxItems:nth-child(1) > .challengesChild:first-child {
+  display: grid;
+  place-items: center;
+}
+
+.challengesChild {
+  width: 100%;
+}
+
+.challengesChild h1 {
+  margin-bottom: 2%;
+  color: var(--fontColor);
+}
+
+.challengesChild p {
+  color: gray;
+}
+
+.challengesInfo {
+  width: 60%;
+  height: 40%;
+  background: #100c1c;
+  margin-bottom: 1%;
+  position: relative;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  border: 1.5px solid var(--glowColor);
+  box-shadow: 0 0 20px -1px var(--glowColor);
+}
+
+.challengesBoxItems:nth-child(3) > .challengesChild:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.filesBox {
+  background: var(--bgColor);
+  border-radius: 10px;
+  color: rgb(167, 39, 167);
+  font-size: 3rem;
+}
+
+.filesBox:first-child {
+  width: 25%;
+  height: 50%;
+  position: relative;
+  z-index: 3;
+  transform: rotate(10deg);
+  border: 3px solid var(--glowColor);
+  box-shadow: 0 0 20px 2px var(--glowColor);
+  color: lightgreen;
+  font-size: 3rem;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}
+
+.filesBox:last-child {
+  width: 50%;
+  height: 80%;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  font-family: arial;
+  left: -10%;
+  border: 2px solid var(--glowColor);
+  box-shadow: 0 0 15px -2px var(--glowColor);
+}
+
+.filesBox:last-child h1 {font-size: 1.3rem; margin: 10% 0 0 0;}
+.filesBox:last-child p {font-size: .8rem;}
+.challengesItems {height: 100%;}
+
+.challengesItems:nth-child(1) {
+  display: grid;
+  place-items: center;
+  width: 20%;
+}
+
+.challengesItems:nth-child(1) div {
+  width: 60%;
+  height: 60%;
+  background: var(--bgColor);
+  display: grid;
+  place-items: center;
+  color: gray;
+  font-size: 2rem;
+}
+
+.challengesItems:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
+}
+
+.challengesItems:nth-child(2) h1 {
+  color: var(--fontColor);
+  font-family: arial;
+  font-size: 1.1rem;
+}
+
+.challengesItems:nth-child(2) p {
+  color: gray;
+  font-family: arial;
+  font-size: .9rem;
+}
+
+.challengesItems:nth-child(3) {
+  color: magenta;
+  text-shadow: 1px 0px 20px magenta;
+  font-family: arial;
+  font-size: .9rem;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+  width: 20%;
+}
+
+.challengesInfo:first-child {
+  z-index: 2;
+}
+
+.challengesInfo:last-child {
+  transform: skew(4deg, -8deg);
+}
+
+.challengesChild:first-child {
+  height: 70%;
+}
+
+.challengesChild:last-child {
+  padding: 0 4%;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 30%;
+}
+
+.challengesBoxItems:first-child {
+  width: 47%;
+  height: 70%;
+}
+
+.challengesBoxItems:nth-child(2) {
+  width: 47%;
+  height: 70%;
+}
+
+.challengesBoxItems:nth-child(2) > .challengesChild:nth-child(1) {
+  padding: 2% 0 2% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.challengesBoxItems:nth-child(3) {
+  width: 30.7%;
+  height: 70%;
+}
+
+.challengesBoxItems:nth-child(4) {
+  width: 30.7%;
+  height: 70%;
+}
+
+.challengesBoxItems:last-child {
+  width: 30.7%;
+  height: 70%;
+}
+
+.challengesBoxItems:nth-child(4) > .challengesChild:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10%;
+}
+
+.challengesBoxItems:nth-child(4) > .challengesChild:first-child > div {
+  width: 30%;
+  height: 60%;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 0 20px 2px var(--glowColor);
+  position: relative;
+  color: gray;
+  display: grid;
+  place-items: center;
+  font-size: 2.5rem;
+}
+
+.challengesBoxItems:nth-child(4) > .challengesChild:first-child > div:hover {
+  color: var(--fontColor);
+  background: rgba(0,0,0,0.1);
+  text-shadow: 3px 3px 3px white;
+}
+
+.challengesBoxItems:nth-child(4) > .challengesChild:first-child > div:nth-child(1) {
+  animation: graphAnimation 2.5s infinite;
+  transform: skew(0, 8deg);
+}
+
+.challengesBoxItems:nth-child(4) > .challengesChild:first-child > div:nth-child(2) {
+  animation: graphAnimation 3s infinite;
+  transform: skew(0, -8deg);
+}
+
+.challengesBoxes::-webkit-scrollbar {
+  width: 0;
+}
+
+.challengesBoxes::-webkit-scrollbar-track {
+  background: black;
+}
+
+.challengesBoxes::-webkit-scrollbar-thumb {
+  background: var(--glowColor);
+}
+
+.challengesSection::before {
+  position: absolute;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 19%, 70% 34%, 36% 38%, 0 52%, 0 0);
+  background: rgba(0, 0, 0, 0.123);
+  z-index: 1;
+  content: "";
+  height: 100%;
+  width: 100%;
+}
+
+.footerSection {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: last baseline;
+  align-items:last baseline;
+}
+
+.footer {
+  width: 100%;
+  height: 30%;
+  position: relative;
+  z-index: 4;
+  background: rgba(16,15,28,255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fontColor);
+  font-family: arial;
+  font-size: 1.5rem;
+}
